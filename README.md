@@ -1,6 +1,6 @@
 # homepage
 
-17th project of Odin project. Create a portfolio page which is responsive on all devices. The project will be using @media. Animations will be included.
+17th project of Odin project. Create a portfolio page which is responsive, light, and fast on all devices. The project will be using @media. Animations will be included. Keyboard/aria accessibility included.
 
 ###Image credits
 

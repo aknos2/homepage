@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creation of a profile page for the Homepage project from Odin Project website.">
     <title>Homepage - Odin Project</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -11,11 +12,11 @@
         <div class="profile-container">
             <div class="overlay"></div> 
             <img 
-                src="./imgs/profile-low.jpg" 
+                src="./imgs/profile-low.webp" 
                 alt="profile" 
                 id="profile-animation-slide"
-                srcset="./imgs/profile-low.jpg 320w, ./imgs/profile-medium.jpg 640w, ./imgs/profile.png 1280w"
-                sizes="(max-width: 480px) 100vw, (max-width: 678px) 50vw, 1080px"
+                srcset="./imgs/profile-low.webp 320w, ./imgs/profile-medium.webp 800w, ./imgs/profile.webp 1280w"
+                sizes="(min-width: 2020px) 1080px, (min-width: 1480px) calc(88.46vw - 689px), (min-width: 1340px) calc(26.67vw + 211px), (min-width: 1280px) calc(-130vw + 2284px), (min-width: 1160px) 1080px, (min-width: 680px) calc(86.96vw + 89px), 616px" 
             >
             <div id="name">
                 <h1>Robo</h1>
@@ -69,8 +70,8 @@
 
     <div class="shape-divider" aria-hidden="true"></div>
     <picture class="walking-robot" aria-hidden="true">
-        <source media="(min-width: 1028px)" srcset="./imgs/robot-moving.png">
-        <img src="./imgs/robot-moving.png" alt="robot-moving">
+        <source media="(min-width: 1028px)" srcset="./imgs/robot-moving.webp">
+        <img src="./imgs/robot-moving.webp" alt="robot-moving">
     </picture>
     
     <main>

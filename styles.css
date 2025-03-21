@@ -7,7 +7,7 @@
     --body-font-color: whitesmoke;
     --profile-name-color: #fff;
     --profile-links-background-color: linear-gradient(rgb(4, 8, 24), rgb(43, 41, 41));
-    --aboutme-background-color: #45796e;
+    --aboutme-background-color: #365E57;
     --card-background-color: rgb(69, 65, 65);
     --header-background-color: rgb(4, 8, 24);
     --footer-background-color: rgb(4, 8, 24);
@@ -32,6 +32,7 @@ body {
 
 header {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -55,6 +56,7 @@ main {
 
 footer {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     background-color: var(--footer-background-color);
@@ -82,9 +84,14 @@ p [href^="tel"], [href^="mail"]  {
     text-decoration: none; /* Remove underline for phone numbers. */
 }
 
+p, h1, h2, h3 {
+    filter: brightness(.8) contrast(1.2);
+}
+
 img {
     display: block;
     width: 100%;
+    height: auto;
 }
 
 .profile-icon-container {
@@ -108,21 +115,7 @@ h2 {
     padding: 15px;
 }
 
-/* .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.1); /* Adjust darkness (0.5 = 50% dark)
-} */
-
 #name {
-    /* text-align: center;
-    position: absolute;
-    color: var(--profile-name-color);
-    bottom: 20px;
-    right: 20px; */
     padding-left: 300px;
     transform: rotate(-3deg);
     animation: shake 0.5s ease;
@@ -286,11 +279,11 @@ h2 {
 }
 
 .project-screenshot#five {
-    background-color: rgb(215, 140, 83) !important;
+    background-color: rgb(160, 98, 51) !important;
 }
 
 .project-screenshot#six {
-    background-color: rgb(158, 167, 79) !important;
+    background-color: rgb(120, 126, 61) !important;
 }
 
 #project-title {
@@ -452,6 +445,13 @@ h2 {
 } 
 
 @media (min-width: 1280px) {
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
     .shape-divider {
         position: relative;
         height: 150px; /* Control the height of the overlap */
@@ -604,7 +604,7 @@ h2 {
         transform: translateX(-50%); /* Center horizontally */
         width: 70%; /* Cover only the right half */
         height: 100%;
-        background-image: url(./imgs/footer-image.jpg);
+        background-image: url(./imgs/footer-image.webp);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -626,7 +626,7 @@ h2 {
     .walking-robot {
         display: block;
         position: fixed; /* This keeps it in view while scrolling */
-        bottom: 50px; /* Distance from bottom of viewport */
+        bottom: 100px; /* Distance from bottom of viewport */
         right: 0; /* Start from the right side */
         width: 250px; /* Set appropriate width */
         height: auto; /* Maintain aspect ratio */
@@ -669,6 +669,10 @@ h2 {
 }
 
 @media (max-width: 768px) {
+    header {
+        flex-wrap: nowrap;
+    }
+
     #name h1 {
         font-size: 2.1rem !important;
         line-height: 1.8rem !important;
@@ -720,6 +724,7 @@ h2 {
 
     .my-works {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -731,4 +736,23 @@ h2 {
         max-width: 600px; /* Adjust this to your preferred card width */
         margin: 0 auto;
     }
+
+    .about-me {
+        background-color: var(--body-background-color);
+        max-width: 100%;
+    }
 }
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-delay: -1ms !important;
+      animation-duration: 1ms !important;
+      animation-iteration-count: 1 !important;
+      background-attachment: initial !important;
+      scroll-behavior: auto !important;
+      transition-duration: 1ms !important;
+      transition-delay: -1ms !important;
+    }
+  }
