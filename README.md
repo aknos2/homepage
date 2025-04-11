@@ -2,7 +2,7 @@
 
 17th project of Odin project. Create a portfolio page which is responsive, light, and fast on all devices. The project will be using @media. Animations will be included. Keyboard/aria accessibility included.
 
-Visit the website here: https://aknos2-cv-application.netlify.app/
+Visit the website here: https://aknos2.github.io/homepage/
 
 ### Image credits
 
